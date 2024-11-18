@@ -1,0 +1,47 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: url('../../Images/Intro.png') center center / cover no-repeat, lightgray;
+    position: relative;
+    /* opacity: 0.91; */
+    mix-blend-mode: luminosity;
+  }
+  
+  
+  .intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+  }
+  
+  .intro-content {
+    text-align: center;
+    z-index: 2; 
+  }
+  
+  .intro-logo {
+    width: 452px;
+    height: 348px;
+    top: 164px;
+    flex-shrink: 0;
+  }
+  
+  .intro-text {
+    color: #E1E1E1;
+    text-align: center;
+    font-family: "Cal Sans";
+    font-size: 37.222px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 55.833px */
+    text-transform: uppercase;
+  }
+  

@@ -1,0 +1,67 @@
+import React from 'react';
+import './ContactUs.css';
+import backgroundImage from '../../Images/contactbg.png'; // Adjust path as needed
+
+const ContactUs = () => {
+  return (
+    <div className="contact-container">
+      {/* Form Section */}
+      <div className="form-section">
+        <h1>Contact Us</h1>
+        <form>
+          <div className="name-fields">
+            <div>
+              <label htmlFor="first-name">First name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="Jane"
+              />
+            </div>
+            <div>
+              <label htmlFor="last-name">Last name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Smitherton"
+              />
+            </div>
+          </div>
+          <div className="email-field">
+            <label htmlFor="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@janesfakedomain.net"
+            />
+          </div>
+          <div className="message-field">
+            <label htmlFor="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your question or message"
+            ></textarea>
+          </div>
+          <button type="submit" className="submit-btn">Submit</button>
+        </form>
+      </div>
+
+      {/* Image Section */}
+      <div
+        className="image-section"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="logo-overlay">
+          <h2>Puba</h2>
+          <p>PRODUCTIONS</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactUs;
