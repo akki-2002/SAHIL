@@ -1,6 +1,8 @@
 import React from 'react';
 import './ContactUs.css';
 import backgroundImage from '../../Images/contactbg.png'; // Adjust path as needed
+import Logo from "../../Images/PUBA logo (3) 1.png"; // Replace with the path to your logo file
+
 
 const ContactUs = () => {
   return (
@@ -53,11 +55,10 @@ const ContactUs = () => {
       {/* Image Section */}
       <div
         className="image-section"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: "no-repeat", backgroundSize: "contain" }}
       >
         <div className="logo-overlay">
-          <h2>Puba</h2>
-          <p>PRODUCTIONS</p>
+        <img src={Logo} alt="Puba Productions Logo" className="intro-logo" />
         </div>
       </div>
     </div>
