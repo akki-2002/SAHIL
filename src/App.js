@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "cal-sans";
 import "./App.css";
-import "./index.css"
+import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Intro from "./Components/Intro/Intro";
@@ -22,30 +22,42 @@ function App() {
 
   return (
     <Router>
-      
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
+      <Navbar
+        onScrollTo={{
+          welcome: () => handleScrollTo(welcomeRef),
+          whatWeDo: () => handleScrollTo(whatWeDoRef),
+          contactUs: () => handleScrollTo(contactUsRef),
+        }}
+      />
+      <Routes>
+        <Route
+          path="/"
+          element={
             <>
               <Intro />
               <div className="allComps">
-              <div className="bgtMain">
-                <div className="bgTexture"></div>
-                <div className="bgTexture"></div>
-              </div>
-              <div className="wwcf">
-                <Welcome />
-                <WhatWeDo />
-                <ContactUs />
-                
-              </div>
+                <div className="bgtMain">
+                  <div className="bgTexture"></div>
+                  <div className="bgTexture"></div>
+                </div>
+                <div className="wwcf">
+                  <div ref={welcomeRef}>
+                    <Welcome />
+                  </div>
+                  <div ref={whatWeDoRef}>
+                    <WhatWeDo />
+                  </div>
+                  <div ref={contactUsRef}>
+                    <ContactUs />
+                  </div>
+                </div>
               </div>
             </>
-          } />
-          <Route path="/submit-profile" element={<SubmitProfile />} />
-        </Routes>
-        <Footer />
-      
+          }
+        />
+        <Route path="/submit-profile" element={<SubmitProfile />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
