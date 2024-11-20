@@ -12,26 +12,27 @@ import SubmitProfile from "./Components/SubmitProfile/SubmitProfile";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={
-          <div className="allComps">
-            <Intro />
-            <div className="bgtMain">
-      {/* <img src={textureImg} alt="" /> */}
-      <div className="bgTexture"></div>
-      <div className="bgTexture"></div>
+      <div className="allComps">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Intro />
+              <div className="bgtMain">
+                <div className="bgTexture"></div>
+                <div className="bgTexture"></div>
+              </div>
+              <div className="wwcf">
+                <Welcome />
+                <WhatWeDo />
+                <ContactUs />
+                <Footer />
+              </div>
+            </>
+          } />
+          <Route path="/submit-profile" element={<SubmitProfile />} />
+        </Routes>
       </div>
-      <div className="wwcf">
-      <Welcome/>
-    <WhatWeDo/>
-    <ContactUs/>
-    <Footer/>
-      </div>
-          </div>
-        } />
-        <Route path="/submit-profile" element={<SubmitProfile />} />
-      </Routes>
     </Router>
   );
 }
