@@ -18,6 +18,11 @@ const SubmitProfile = () => {
       .then((response) => {
         console.log("Success!", response);
         setFormStatus("Form submitted successfully!");
+        alert("Form submitted successfully!"); // Alert for immediate feedback
+        setTimeout(() => {
+          setFormStatus("You can Exit the page Now!!!"); // Clear message after 1 second
+        }, 1000);
+        e.target.reset(); // Reset the form
       })
       .catch((error) => {
         console.error("Error!", error.message);
@@ -210,6 +215,7 @@ const SubmitProfile = () => {
           </form>
 
           {formStatus && <p className="form-status">{formStatus}</p>}
+          
         </div>
 
         
