@@ -121,10 +121,10 @@ padding: 0rem 3rem;
 
   }
   
-  textarea {
+  /* textarea {
     height: 120px;
     resize: none;
-  }
+  } */
   
   .submit-btn {
     padding: 0.8rem 2rem;
@@ -146,9 +146,7 @@ text-decoration-skip-ink: none;
 
   }
   
-  .submit-btn:hover {
-    background-color: #e0a84d;
-  }
+ 
   
   /* Responsive Design */
   @media (max-width: 768px) {
