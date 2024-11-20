@@ -7,17 +7,8 @@ import { useState } from "react";
 const SubmitProfile = () => {
 
 
-   
-      
-      
-      
-      
-
-
-
-
   return (
-    <>
+    <div>
     <div className="submit-profile-container">
       {/* Form Section */}
       <div className="form-section1">
@@ -246,8 +237,8 @@ const SubmitProfile = () => {
 
       
     </div>
-    <Footer/>
-    </>
+    {/* <Footer/> */}
+    </div>
   );
 };
 
