@@ -3,10 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    background: 
-      var(--Primary-Yellow, #FFFFD3) 
-      url('../../Images/texture.png'); /* Texture background */
+    height: 100vh; /* Full viewport height *//* Texture background */
     background-size: cover; /* Ensure texture fills the area */
     background-repeat: no-repeat;
     background-position: center;

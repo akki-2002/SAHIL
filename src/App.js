@@ -9,14 +9,22 @@ import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <>
+    <div className="allComps">
     <Navbar/>
     <Intro/>
-    <Welcome/>
+    <div className="bgtMain">
+      {/* <img src={textureImg} alt="" /> */}
+      <div className="bgTexture"></div>
+      <div className="bgTexture"></div>
+      </div>
+      <div className="wwcf">
+      <Welcome/>
     <WhatWeDo/>
     <ContactUs/>
     <Footer/>
-    </>
+      </div>
+    
+    </div>
   );
 }
 

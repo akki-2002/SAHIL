@@ -2,11 +2,17 @@ import React from 'react';
 import './ContactUs.css';
 import backgroundImage from '../../Images/contactbg.png'; // Adjust path as needed
 import Logo from "../../Images/PUBA logo (3) 1.png"; // Replace with the path to your logo file
+import textureImg from '../../Images/texture.png'
 
 
 const ContactUs = () => {
   return (
-    <div className="contact-container">
+    // <div className='contactMain'>
+    
+   
+
+      <div className="contact-container">
+      
       {/* Form Section */}
       <div className="form-section">
         <h1>Contact Us</h1>
@@ -61,7 +67,11 @@ const ContactUs = () => {
         <img src={Logo} alt="Puba Productions Logo" className="intro-logo" />
         </div>
       </div>
+
+      
     </div>
+    // </div>
+    
   );
 };
 
