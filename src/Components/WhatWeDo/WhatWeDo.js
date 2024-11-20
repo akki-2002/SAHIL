@@ -3,12 +3,12 @@ import "./WhatWeDo.css";
 import { Link } from 'react-router-dom';
 
 // Image Imports (Update the paths to match your setup)
-import ActingImg from "../../Images/acting.png";
-import WritingImg from "../../Images/writing.png";
-import ProductionManagingImg from "../../Images/Production.png";
-import DirectionImg from "../../Images/direction.png";
-import FilmmakingImg from "../../Images/flimmaking.png";
-import MusicImg from "../../Images/music.png";
+import ActingImg from "../../Images/acting.jpg";
+import WritingImg from "../../Images/writing.jpg";
+import ProductionManagingImg from "../../Images/production.jpg";
+import DirectionImg from "../../Images/direction.jpg";
+import FilmmakingImg from "../../Images/filmMaking.jpg";
+import MusicImg from "../../Images/music.jpg";
 
 const WhatWeDo = () => {
   return (
@@ -18,7 +18,8 @@ const WhatWeDo = () => {
         {/* Grid Items */}
       
         <div className="grid-item acting">
-        <Link to="/submit-profile" className="submit-link">
+          <div className="giBlur"></div>
+          <Link to="/submit-profile" className="submit-link">
           <img src={ActingImg} alt="Acting" />
           <span className="grid-text">ACTING</span>
           </Link>
@@ -26,6 +27,7 @@ const WhatWeDo = () => {
   
         
         <div className="grid-item writing">
+        <div className="giBlur"></div>
         <Link to="/submit-profile" className="submit-link">
           <img src={WritingImg} alt="Writing" />
           <span className="grid-text">WRITING</span>
@@ -34,6 +36,7 @@ const WhatWeDo = () => {
   
       
         <div className="grid-item production">
+        <div className="giBlur"></div>
         <Link to="/submit-profile" className="submit-link">
           <img src={ProductionManagingImg} alt="Production Managing" />
           <span className="grid-text">PRODUCTION MANAGING</span>
@@ -42,6 +45,7 @@ const WhatWeDo = () => {
 
         
         <div className="grid-item direction">
+        <div className="giBlur"></div>
         <Link to="/submit-profile" className="submit-link">
           <img src={DirectionImg} alt="Direction" />
           <span className="grid-text">DIRECTION</span>
@@ -50,6 +54,7 @@ const WhatWeDo = () => {
        
      
         <div className="grid-item filmmaking">
+        <div className="giBlur"></div>
         <Link to="/submit-profile" className="submit-link">
           <img src={FilmmakingImg} alt="Filmmaking" />
           <span className="grid-text">FILMMAKING</span>
@@ -58,6 +63,7 @@ const WhatWeDo = () => {
         
         
         <div className="grid-item music">
+        <div className="giBlur"></div>
         <Link to="/submit-profile" className="submit-link">
           <img src={MusicImg} alt="Music" />
           <span className="grid-text">MUSIC</span>

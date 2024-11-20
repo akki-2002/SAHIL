@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    background: url('../../Images/Intro.png') center center / cover no-repeat, lightgray;
+    background: url('../../Images/Intro.jpg') center center / cover no-repeat, lightgray;
     position: relative;
     /* opacity: 0.91; */
     mix-blend-mode: luminosity;
