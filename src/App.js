@@ -12,12 +12,13 @@ import SubmitProfile from "./Components/SubmitProfile/SubmitProfile";
 function App() {
   return (
     <Router>
-      <div className="allComps">
+      
         <Navbar />
         <Routes>
           <Route path="/" element={
             <>
               <Intro />
+              <div className="allComps">
               <div className="bgtMain">
                 <div className="bgTexture"></div>
                 <div className="bgTexture"></div>
@@ -26,13 +27,15 @@ function App() {
                 <Welcome />
                 <WhatWeDo />
                 <ContactUs />
-                <Footer />
+                
+              </div>
               </div>
             </>
           } />
           <Route path="/submit-profile" element={<SubmitProfile />} />
         </Routes>
-      </div>
+        <Footer />
+      
     </Router>
   );
 }

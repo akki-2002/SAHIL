@@ -1,7 +1,8 @@
 .submit-profile-container {
   display: flex;
   padding: 5rem 0rem 5rem 4rem;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
+  
 }
 
 .form-section1 {
