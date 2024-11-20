@@ -17,58 +17,49 @@ const WhatWeDo = () => {
       <div className="grid-container">
         {/* Grid Items */}
       
-        <div className="grid-item acting">
+        <Link to="/submit-profile" className="grid-item acting">
           <div className="giBlur"></div>
-          <Link to="/submit-profile" className="submit-link">
           <img src={ActingImg} alt="Acting" />
           <span className="grid-text">ACTING</span>
-          </Link>
-        </div>
+          
+        </Link>
   
         
-        <div className="grid-item writing">
+        <Link to="/submit-profile" className="grid-item writing">
         <div className="giBlur"></div>
-        <Link to="/submit-profile" className="submit-link">
           <img src={WritingImg} alt="Writing" />
           <span className="grid-text">WRITING</span>
           </Link>
-        </div>
   
       
-        <div className="grid-item production">
+        <Link to="/submit-profile" className="grid-item production">
         <div className="giBlur"></div>
-        <Link to="/submit-profile" className="submit-link">
           <img src={ProductionManagingImg} alt="Production Managing" />
           <span className="grid-text">PRODUCTION MANAGING</span>
           </Link>
-        </div>
 
         
-        <div className="grid-item direction">
+        <Link to="/submit-profile" className="grid-item direction">
         <div className="giBlur"></div>
-        <Link to="/submit-profile" className="submit-link">
           <img src={DirectionImg} alt="Direction" />
           <span className="grid-text">DIRECTION</span>
           </Link>
-        </div>
        
      
-        <div className="grid-item filmmaking">
+        <Link to="/submit-profile" className="grid-item filmmaking">
         <div className="giBlur"></div>
-        <Link to="/submit-profile" className="submit-link">
           <img src={FilmmakingImg} alt="Filmmaking" />
           <span className="grid-text">FILMMAKING</span>
           </Link>
-        </div>
+    
         
         
-        <div className="grid-item music">
+        <Link to="/submit-profile" className="grid-item music">
         <div className="giBlur"></div>
-        <Link to="/submit-profile" className="submit-link">
           <img src={MusicImg} alt="Music" />
           <span className="grid-text">MUSIC</span>
           </Link>
-        </div>
+      
     
       </div>
     </div>
