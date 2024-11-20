@@ -22,42 +22,30 @@ function App() {
 
   return (
     <Router>
-      <div className="allComps">
-        <Navbar
-          onScrollTo={{
-            welcome: () => handleScrollTo(welcomeRef),
-            whatWeDo: () => handleScrollTo(whatWeDoRef),
-            contactUs: () => handleScrollTo(contactUsRef),
-          }}
-        />
+      
+        <Navbar />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Intro />
-                <div className="bgtMain">
-                  <div className="bgTexture"></div>
-                  <div className="bgTexture"></div>
-                </div>
-                <div className="wwcf">
-                  <div ref={welcomeRef}>
-                    <Welcome />
-                  </div>
-                  <div ref={whatWeDoRef}>
-                    <WhatWeDo />
-                  </div>
-                  <div ref={contactUsRef}>
-                    <ContactUs />
-                  </div>
-                  <Footer />
-                </div>
-              </>
-            }
-          />
+          <Route path="/" element={
+            <>
+              <Intro />
+              <div className="allComps">
+              <div className="bgtMain">
+                <div className="bgTexture"></div>
+                <div className="bgTexture"></div>
+              </div>
+              <div className="wwcf">
+                <Welcome />
+                <WhatWeDo />
+                <ContactUs />
+                
+              </div>
+              </div>
+            </>
+          } />
           <Route path="/submit-profile" element={<SubmitProfile />} />
         </Routes>
-      </div>
+        <Footer />
+      
     </Router>
   );
 }

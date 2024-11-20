@@ -35,8 +35,12 @@ const SubmitProfile = () => {
       });
   };
   return (
-    <>
-      <div className="submit-profile-container">
+    <div className="allComps">
+    <div className="bgtMain">
+                <div className="bgTexture"></div>
+                <div className="bgTexture"></div>
+              </div>
+      <div className="submit-profile-container wwcf">
         {/* Form Section */}
         <div className="form-section1">
           <h1>Submit Profile</h1>
@@ -230,8 +234,7 @@ const SubmitProfile = () => {
           <img src={img} alt="Creative" />
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 
