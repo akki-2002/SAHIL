@@ -11,6 +11,7 @@ background-color: transparent;
   align-items: center;
 position: relative;
 z-index: 2;
+margin-bottom: 3rem;
   }
 
   .bgtMain{
@@ -65,8 +66,9 @@ padding: 0rem 3rem;
   .image-section {
     flex: 6 1;
     max-width: 50%;
-    min-height: 60%;
-    margin-top: 6rem;
+    min-height: 80%;
+
+    margin-top: 2rem;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -200,3 +202,9 @@ text-decoration-skip-ink: none;
     }
   }
   
+
+  input:focus,
+textarea:focus {
+  border-color: #FFE6A0; /* Your desired focus color */
+  outline: none;
+}

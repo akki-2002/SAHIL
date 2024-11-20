@@ -1,57 +1,68 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    border-bottom: 1px solid #000;
-    background: var(--Primary-Yellow, #FFFFD3);
-    font-family: Arial, sans-serif;
-    height: 70px;
-  }
-  
-  .navbar-logo {
-    width: 94px;
-    height: 44px;
-    flex-shrink: 0;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu-links {
-    display: inline-flex;
-    align-items: center;
-    gap: 60px;
-  }
-  
-  .menu-links li {
-    list-style: none;
-    color: var(--Black, #111);
-    font-family: "Cal Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    /* line-height: 150%; */
-    padding: 15px 16px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 1px solid transparent;
-  }
-  
-  .menu-links li:hover {
-    border-radius: 9px;
-    border: 1px solid #000;
-    background: var(--Highlight-Yellow, #FFE6A0);
-    /* display: flex; */
-/* width: 182px; */
-/* height: 60px; */
-padding: 15px 16px;
-/* justify-content: center; */
-/* align-items: center; */
-/* gap: 10px; */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  border-bottom: 1px solid #000;
+  background: var(--Primary-Yellow, #FFFFD3);
+  font-family: Arial, sans-serif;
+  height: 70px;
+  position: sticky; /* This makes the navbar sticky */
+  top: 0; /* Stick to the top of the page */
+  z-index: 2000; /* Ensure navbar is above other content */
+}
+
+.navbar-logo {
+  width: 94px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.menu-links li {
+  list-style: none;
+  color: var(--Black, #111);
+  font-family: "Cal Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 15px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-links li:hover {
+  border-radius: 9px;
+  border: 1px solid #000;
+  background: var(--Highlight-Yellow, #FFE6A0);
+}
+
+/* Active Class Styling */
+.menu-links .active {
+  border-radius: 9px;
+  border: 1px solid #000;
+  background: var(--Highlight-Yellow, #FFE6A0);
+}

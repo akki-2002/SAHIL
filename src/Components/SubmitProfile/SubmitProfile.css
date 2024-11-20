@@ -227,3 +227,16 @@ label {
     text-decoration-skip-ink: none;
     
 }
+
+
+input:focus,
+textarea:focus {
+  border-color: #FFE6A0; /* Your desired focus color */
+  outline: none;
+}
+
+
+
+
+
+

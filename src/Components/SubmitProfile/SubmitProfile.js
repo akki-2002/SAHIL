@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SubmitProfile.css";
 import img from "../../Images/submitProfile.jpg";
 import Footer from "../Footer/Footer";
@@ -8,6 +8,11 @@ const SubmitProfile = () => {
 
 
   const [formStatus, setFormStatus] = useState(""); // For feedback messages
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();

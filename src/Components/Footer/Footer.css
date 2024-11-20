@@ -11,11 +11,11 @@
   display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 80%;
+    width: 90%;
     border: none;
     background: #FFE6A0;
     border-radius: 0px 0px 40px 40px;
-    padding: 1rem 4rem;
+    padding: 3rem 4rem;
     margin: 0 auto;
 }
 
@@ -30,12 +30,12 @@
   font-weight: 600;
   line-height: 30px;
   text-decoration: underline;
-  margin-bottom: 5px;
+  margin-bottom: 2rem;
 }
 
 .header-left h1 {
   font-family: Cal Sans;
-  font-size: 58px;
+  font-size: 64px;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0;
@@ -47,7 +47,7 @@
 
 .header-right h2 {
   font-family: Cal Sans;
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -57,7 +57,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 70%;
   margin: 0 auto;
 }
@@ -67,9 +67,15 @@
 }
 
 .menu h4, .connect h4 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-family: Cal Sans;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin-bottom: 1rem;
+
 }
 
 .menu ul, .connect ul {
@@ -78,8 +84,14 @@
 }
 
 .menu li, .connect li {
-  font-size: 16px;
-  margin-bottom: 0.5rem;
+  font-family: Inter;
+font-size: 20px;
+font-weight: 500;
+
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin-bottom: 0.8rem;
 }
 
 
@@ -104,13 +116,14 @@
 
 /* Footer Credits */
 .footer-credits {
+  width: 90%;
   font-family: Inter;
 font-size: 20px;
 font-weight: 500;
-padding: 1rem 13rem;
+padding: 1rem;
 text-align: right;
 color: #000000;
-
+margin-bottom: 3rem;
 
 }
 

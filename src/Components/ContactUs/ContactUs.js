@@ -87,7 +87,7 @@ const ContactUs = () => {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
+       
         }}
       >
         <div className="logo-overlay">

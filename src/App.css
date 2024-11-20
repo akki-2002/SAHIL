@@ -1,16 +1,47 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scrollbar-width: none; /* For Firefox */
+    scrollbar-color: rgba(214, 179, 83, 1) transparent; /* For Firefox */
 }
 
-.allComps{
+.allComps {
     position: relative;
-    background: 
-    var(--Primary-Yellow, #FFFFD3) ;
+    background: var(--Primary-Yellow, #FFFFD3);
+    overflow-y: auto; /* Ensure scrollbars appear if content overflows */
 }
 
-.wwcf{
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+.allComps::-webkit-scrollbar {
+    width: 3px; /* Adjust thickness */
+}
+
+.allComps::-webkit-scrollbar-thumb {
+    background-color: rgba(214, 179, 83, 1); /* Thumb color */
+    border-radius: 6px; /* Round edges */
+}
+
+.allComps::-webkit-scrollbar-track {
+    background: transparent; /* Background track color */
+}
+
+.wwcf {
     position: relative;
     z-index: 2;
+    overflow-y: auto; /* Ensure scrollbars appear if content overflows */
+}
+
+/* Scrollbar styling for wwcf (optional, if needed separately) */
+.wwcf::-webkit-scrollbar {
+    width: 3px;
+}
+
+.wwcf::-webkit-scrollbar-thumb {
+    background-color: rgba(214, 179, 83, 1);
+    border-radius: 4px;
+}
+
+.wwcf::-webkit-scrollbar-track {
+    background: transparent;
 }
