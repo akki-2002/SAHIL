@@ -7,8 +7,8 @@
   background: var(--Primary-Yellow, #FFFFD3);
   font-family: Arial, sans-serif;
   height: 70px;
-  position: sticky; /* This makes the navbar sticky */
-  top: 0; /* Stick to the top of the page */
+  position: sticky; /* Makes the navbar sticky */
+  top: 0; /* Sticks to the top of the page */
   z-index: 2000; /* Ensure navbar is above other content */
 }
 
@@ -65,4 +65,51 @@
   border-radius: 9px;
   border: 1px solid #000;
   background: var(--Highlight-Yellow, #FFE6A0);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Below the navbar */
+    right: 0;
+    background: var(--Primary-Yellow, #FFFFD3);
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #000;
+    z-index: 1500;
+  }
+
+  .navbar-menu.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  .menu-links {
+    flex-direction: column;
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+
+  .menu-links li {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-logo {
+    width: 80px; /* Adjust logo size for smaller screens */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-links li {
+    font-size: 16px; /* Further reduce font size */
+  }
+
+  .navbar {
+    padding: 10px 20px; /* Reduce padding for very small screens */
+  }
 }
