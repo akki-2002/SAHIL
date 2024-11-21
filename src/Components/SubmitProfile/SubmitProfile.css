@@ -7,7 +7,7 @@
 
 .form-section1 {
   width: 70%;
-  padding-right: 3rem;
+  padding-right: 10rem;
 }
 
 .form-section1 h1 {
@@ -208,7 +208,7 @@ label {
    border: 1px solid rgba(130, 130, 130, 1);
    border-radius: 8px;
    padding: 0.5rem;
-   width: 80%;
+   width: 100%;
 }
 
 .category div {
