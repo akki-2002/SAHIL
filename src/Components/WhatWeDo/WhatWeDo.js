@@ -1,5 +1,6 @@
 import React from "react";
 import "./WhatWeDo.css";
+import './wwdMedia.css';
 import { Link } from 'react-router-dom';
 
 // Image Imports (Update the paths to match your setup)
@@ -9,6 +10,7 @@ import ProductionManagingImg from "../../Images/production.jpg";
 import DirectionImg from "../../Images/direction.jpg";
 import FilmmakingImg from "../../Images/filmMaking.jpg";
 import MusicImg from "../../Images/music.jpg";
+
 
 const WhatWeDo = () => {
   return (

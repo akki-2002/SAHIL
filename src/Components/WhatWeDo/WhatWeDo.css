@@ -72,7 +72,7 @@ justify-content: center;
   
   .grid-text {
     position: absolute;
-    font-size: 3rem;
+    font-size: 3svw;
     font-weight: 600;
     color: #D6B353;
     width: max-content;
