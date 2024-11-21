@@ -5,9 +5,15 @@ import Logo from "../../Images/PUBA logo (3) 1.png"; // Replace with the path to
 
 const ContactUs = () => {
   const [formStatus, setFormStatus] = useState(''); // For success/error messages
+  const [isSubmitting, setIsSubmitting] = useState(false); // Prevent multiple submissions
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (isSubmitting) return; // Prevent multiple clicks
+    setIsSubmitting(true);
+    setFormStatus('Submitting...');
+
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwSgTMRhvLn6SMFPtwxo-CrxcxAzUQE9lSwSSkxO9M3DsYp7ovF_DTz-7Q0FPp57Q38jw/exec'; // Replace with your Google Script URL
     const form = e.target;
 
@@ -15,15 +21,17 @@ const ContactUs = () => {
       .then((response) => {
         console.log("Success!", response);
         setFormStatus("Form submitted successfully!");
-        alert("Form submitted successfully!"); // Alert for immediate feedback
-        setTimeout(() => {
-          setFormStatus("Explore More about PUBA..."); // Clear message after 1 second
-        }, 1000);
-        e.target.reset(); // Reset the form
+        form.reset(); // Reset the form
       })
       .catch((error) => {
         console.error('Error!', error.message);
         setFormStatus('An error occurred. Please try again.');
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setFormStatus("Explore More about PUBA...");
+          setIsSubmitting(false); // Re-enable the submit button
+        }, 3000); // Reduced delay for message clearing
       });
   };
 
@@ -74,7 +82,9 @@ const ContactUs = () => {
               required
             ></textarea>
           </div>
-          <button type="submit" className="submit-btn">Submit</button>
+          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? 'Thank You!' : 'Submit'}
+          </button>
         </form>
 
         {/* Feedback Message */}
@@ -87,7 +97,6 @@ const ContactUs = () => {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundRepeat: 'no-repeat',
-       
         }}
       >
         <div className="logo-overlay">

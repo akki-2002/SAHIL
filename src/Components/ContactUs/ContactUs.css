@@ -209,3 +209,8 @@ textarea:focus {
   border-color: #FFE6A0; /* Your desired focus color */
   outline: none;
 }
+
+.form-status {
+  margin-top: 4px;
+  font-weight: 600;
+}

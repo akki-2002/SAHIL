@@ -4,11 +4,8 @@ import img from "../../Images/submitProfile.jpg";
 import Footer from "../Footer/Footer";
 
 const SubmitProfile = () => {
-
-
-
   const [formStatus, setFormStatus] = useState(""); // For feedback messages
-
+  const [isSubmitting, setIsSubmitting] = useState(false); // Prevent multiple submissions
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,6 +13,11 @@ const SubmitProfile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (isSubmitting) return; // Prevent multiple clicks
+    setIsSubmitting(true);
+    setFormStatus("Submitting...");
+
     const scriptURL = "https://script.google.com/macros/s/AKfycbxRqbx9S5QuyxjR4DQF8rocwL5nVLCmPLZiIi6AKfZlUbTYK7xE7JkYm8VB_hKKIEth/exec";
     const formData = new FormData(e.target);
 
@@ -23,23 +25,26 @@ const SubmitProfile = () => {
       .then((response) => {
         console.log("Success!", response);
         setFormStatus("Form submitted successfully!");
-        alert("Form submitted successfully!"); // Alert for immediate feedback
-        setTimeout(() => {
-          setFormStatus("You can Exit the page Now!!!"); // Clear message after 1 second
-        }, 1000);
         e.target.reset(); // Reset the form
       })
       .catch((error) => {
         console.error("Error!", error.message);
         setFormStatus("An error occurred. Please try again.");
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setFormStatus("You can Exit the page Now!!!");
+          setIsSubmitting(false); // Re-enable the submit button
+        }, 3000); // Reduced delay for message clearing
       });
   };
+
   return (
     <div className="allComps">
-    <div className="bgtMain">
-                <div className="bgTexture"></div>
-                <div className="bgTexture"></div>
-              </div>
+      <div className="bgtMain">
+        <div className="bgTexture"></div>
+        <div className="bgTexture"></div>
+      </div>
       <div className="submit-profile-container wwcf">
         {/* Form Section */}
         <div className="form-section1">
@@ -218,16 +223,13 @@ const SubmitProfile = () => {
               />
             </div>
 
-            <button type="submit" className="submit-btn-profile">
-              Submit Profile
+            <button type="submit" className="submit-btn-profile" disabled={isSubmitting}>
+              {isSubmitting ? "Thank You!" : "Submit Profile"}
             </button>
           </form>
 
           {formStatus && <p className="form-status">{formStatus}</p>}
-          
         </div>
-
-        
 
         {/* Image Section */}
         <div className="image-section1">
