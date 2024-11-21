@@ -40,7 +40,7 @@ function App() {
                   <div className="bgTexture"></div>
                   <div className="bgTexture"></div>
                 </div>
-                <div className="wwcf">
+                <div className="wwcf acww">
                   <div ref={welcomeRef}>
                     <Welcome />
                   </div>

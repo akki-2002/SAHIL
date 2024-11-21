@@ -1,13 +1,21 @@
 .submit-profile-container {
-  display: flex;
-  padding: 5rem 0rem 5rem 4rem;
-  /* margin-bottom: 3rem; */
+  display: flex
+  ;
+      /* padding: 5rem 0rem 5rem 4rem; */
+      /* margin-bottom: 3rem; */
+      justify-content: flex-end;
+      padding: 40px 0;
   
 }
 
 .form-section1 {
+<<<<<<< HEAD
   width: 70%;
   padding-right: 10rem;
+=======
+  width: 65%;
+  padding-right: 3rem;
+>>>>>>> 9ce5d9db050643e5443044b1cff3aef99044da21
 }
 
 .form-section1 h1 {
@@ -208,7 +216,7 @@ label {
    border: 1px solid rgba(130, 130, 130, 1);
    border-radius: 8px;
    padding: 0.5rem;
-   width: 100%;
+   min-width: 80%;
 }
 
 .category div {
