@@ -29,7 +29,6 @@ height: 100vh;
     background-image: url('../../Images/texture.png');
     background-blend-mode: exclusion;
     background-size: contain;
-    
     height: 100%;
     width: 65%;
     z-index: 1;
@@ -239,4 +238,9 @@ textarea:focus {
   margin-top: 4px;
   font-weight: 600;
 }
+}
+
+.form-status {
+  margin-top: 4px;
+  font-weight: 600;
 }

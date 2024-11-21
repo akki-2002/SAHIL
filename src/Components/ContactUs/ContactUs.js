@@ -5,13 +5,13 @@ import Logo from "../../Images/PUBA logo (3) 1.png"; // Replace with the path to
 
 const ContactUs = () => {
   const [formStatus, setFormStatus] = useState(''); // For success/error messages
-  const [isSubmitting, setIsSubmitting] = useState(false); // Prevent multiple submissions
+  const [buttonText, setButtonText] = useState('Submit'); // Button text state
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (isSubmitting) return; // Prevent multiple clicks
-    setIsSubmitting(true);
+    if (buttonText === 'Thank You!') return; // Prevent further action while "Thank You!" is shown
+    setButtonText('Submitting...');
     setFormStatus('Submitting...');
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwSgTMRhvLn6SMFPtwxo-CrxcxAzUQE9lSwSSkxO9M3DsYp7ovF_DTz-7Q0FPp57Q38jw/exec'; // Replace with your Google Script URL
@@ -21,17 +21,19 @@ const ContactUs = () => {
       .then((response) => {
         console.log("Success!", response);
         setFormStatus("Form submitted successfully!");
+        setButtonText('Thank You!'); // Update button text on success
         form.reset(); // Reset the form
+
+        // Reset button to original text after a delay
+        setTimeout(() => {
+          setButtonText('Submit');
+          setFormStatus("Explore More about PUBA...");
+        }, 3000);
       })
       .catch((error) => {
         console.error('Error!', error.message);
         setFormStatus('An error occurred. Please try again.');
-      })
-      .finally(() => {
-        setTimeout(() => {
-          setFormStatus("Explore More about PUBA...");
-          setIsSubmitting(false); // Re-enable the submit button
-        }, 3000); // Reduced delay for message clearing
+        setButtonText('Submit'); // Reset button text on error
       });
   };
 
@@ -82,8 +84,8 @@ const ContactUs = () => {
               required
             ></textarea>
           </div>
-          <button type="submit" className="submit-btn" disabled={isSubmitting}>
-            {isSubmitting ? 'Thank You!' : 'Submit'}
+          <button type="submit" className="submit-btn">
+            {buttonText}
           </button>
         </form>
 

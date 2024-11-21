@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 
 const SubmitProfile = () => {
   const [formStatus, setFormStatus] = useState(""); // For feedback messages
-  const [isSubmitting, setIsSubmitting] = useState(false); // Prevent multiple submissions
+  const [buttonText, setButtonText] = useState("Submit Profile"); // Manage button text
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,28 +14,27 @@ const SubmitProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (isSubmitting) return; // Prevent multiple clicks
-    setIsSubmitting(true);
-    setFormStatus("Submitting...");
+    if (buttonText === "Thank You!") return; // Prevent further action while showing "Thank You!"
+    setButtonText("Submitting...");
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxRqbx9S5QuyxjR4DQF8rocwL5nVLCmPLZiIi6AKfZlUbTYK7xE7JkYm8VB_hKKIEth/exec";
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxRqbx9S5QuyxjR4DQF8rocwL5nVLCmPLZiIi6AKfZlUbTYK7xE7JkYm8VB_hKKIEth/exec";
     const formData = new FormData(e.target);
 
     fetch(scriptURL, { method: "POST", body: formData })
       .then((response) => {
         console.log("Success!", response);
         setFormStatus("Form submitted successfully!");
+        setButtonText("Thank You!"); // Update button to "Thank You!"
         e.target.reset(); // Reset the form
+
+        // Reset button to original text after a delay
+        setTimeout(() => setButtonText("Submit Profile"), 3000);
       })
       .catch((error) => {
         console.error("Error!", error.message);
         setFormStatus("An error occurred. Please try again.");
-      })
-      .finally(() => {
-        setTimeout(() => {
-          setFormStatus("You can Exit the page Now!!!");
-          setIsSubmitting(false); // Re-enable the submit button
-        }, 3000); // Reduced delay for message clearing
+        setButtonText("Submit Profile"); // Reset button text
       });
   };
 
@@ -223,8 +222,12 @@ const SubmitProfile = () => {
               />
             </div>
 
-            <button type="submit" className="submit-btn-profile" disabled={isSubmitting}>
-              {isSubmitting ? "Thank You!" : "Submit Profile"}
+            <button
+              type="submit"
+              className="submit-btn-profile"
+              disabled={buttonText === "Submitting..."}
+            >
+              {buttonText}
             </button>
           </form>
 
