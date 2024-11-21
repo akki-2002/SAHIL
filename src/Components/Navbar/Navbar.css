@@ -125,3 +125,14 @@
     padding: 10px 20px; /* Reduce padding for very small screens */
   }
 }
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-links{
+    gap: 20px;
+  }
+  .menu-links li{
+    padding: 7px 10px;
+    font-size: 1rem;
+  }
+}

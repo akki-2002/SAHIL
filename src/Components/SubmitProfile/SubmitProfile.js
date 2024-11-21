@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SubmitProfile.css";
+import "./spMedia.css"
 import img from "../../Images/submitProfile.jpg";
 import Footer from "../Footer/Footer";
 
