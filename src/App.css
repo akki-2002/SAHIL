@@ -9,7 +9,6 @@
 .allComps {
     position: relative;
     background: var(--Primary-Yellow, #FFFFD3);
-    overflow-y: auto; /* Ensure scrollbars appear if content overflows */
 }
 
 /* WebKit-based browsers (Chrome, Safari, Edge) */
@@ -29,7 +28,10 @@
 .wwcf {
     position: relative;
     z-index: 2;
-    overflow-y: auto; /* Ensure scrollbars appear if content overflows */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 /* Scrollbar styling for wwcf (optional, if needed separately) */
